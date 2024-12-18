@@ -1,4 +1,26 @@
-.header{
+.header {
     background-color: rgb(255, 241, 193);
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.header__menu {
+    background-color: rgb(242, 220, 80);
+    color: rgb(0, 0, 0);
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu__link {
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(62, 120, 167);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
