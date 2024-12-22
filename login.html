@@ -8,21 +8,20 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
+    <header class="header container">
         <img src="images/scale_1200 (1).png" alt="Логотип" width="150" height="150">
-        <h1>Онлайн-школа английского языка</h1>
-        <h2>Главная страница</h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="#">Курсы</a></li>
-                    <li><a href="#">Преподаватели</a></li>
-                    <li><a href="#">Контакты</a></li>
+        <h1 class="header__title">Онлайн-школа английского языка</h1>
+            <nav class="header__menu">
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Курсы</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Преподаватели</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
                 </ul>
             </nav>
-            <a href="login.html">Вход</a>
+            <a class="header__login" href="login.html">Вход</a>
     </header>
-    <main>
+    <main class="main container">
         <div>
            <h2>Авторизируйтесь</h2>
            <form action="" method="post">
@@ -50,8 +49,8 @@
             </form> 
         </div>
     </main>
-    <footer> 
-        <p>Новик Алина, Павлова Юлия, ЛВ-41</p>
+    <footer class="footer container"> 
+        <p class="footer__text">Новик Алина, Павлова Юлия, ЛВ-41</p>
     </footer>
 </body>
 </html>

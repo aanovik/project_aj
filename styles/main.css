@@ -16,4 +16,18 @@
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+}
+.teacher__list {
+    align-self: center;
+}
+.teacher__photo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.arrow_button {
+    background-color:  rgb(217, 152, 152);
+    border-width: 0;
+    cursor: pointer;
 }
