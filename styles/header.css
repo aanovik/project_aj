@@ -1,11 +1,12 @@
 .header {
-    background-color: rgb(255, 241, 193);
-    color: rgb(0, 0, 0);
+    background-color: rgb(238, 226, 220);
+    color: rgb(172, 59, 97);
 }
 
 .header__menu {
-    background-color: rgb(242, 220, 80);
-    color: rgb(0, 0, 0);
+    background-color: rgb(238, 226, 220);
+    color: rgb(172, 59, 97);
+    display: flex;
 }
 
 .menu {
@@ -20,7 +21,29 @@
     display: block;
     padding: 10px;
     margin: 5px;
-    background-color: rgb(62, 120, 167);
-    color: rgb(255, 255, 255);
+    background-color: rgb(237, 199, 183);
+    color: rgb(172, 59, 97);
     text-decoration: none;
 }
+.header__login{
+    display: inline-block;
+     padding: 10px;
+     margin: 5px;
+     background-color: rgb(237, 199, 183);
+     color: rgb(172, 59, 97);;
+     text-decoration: none;
+     margin-left: auto;
+    }
+    .header__logo-wrap{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+       }
+       .header__logo-wrap{
+        text-decoration: none;
+        color: rgb(172, 59, 97);
+       }
+       .header__title{
+        margin: 0;
+       }
+              
