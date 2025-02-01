@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Авторизация/регистраця</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -11,42 +11,62 @@
     <header class="header container">
         <a class="header__logo-wrap" href="index.html">
             <img class="header__logo" src="images/scale_1200 (1).png" alt="Логотип" width="150" height="150">
-        <h1 class="header__title">Онлайн-школа английского языка</h1>
-            <nav class="header__menu">
-                <ul class="menu">
-                    <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Курсы</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Преподаватели</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
-                </ul>
-                <a class="header__login" href="login.html">Вход</a>
-            </nav>
+            <h1 class="header__title">Онлайн-школа английского языка</h1>
+        </a>
+        <hr class="divider">
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Курсы</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Преподаватели</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+            </ul>
+            <a class="header__login" href="login.html">Вход</a>
+        </nav>
     </header>
     <main class="main container">
         <div>
-           <h2>Авторизируйтесь</h2>
-           <form action="" method="post">
-            <label for="login">Логин:</label>
-            <input type="text" id="login" name="login" required>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required>
-            <input type="submit" value="Войти">
+            <h2 class="authorization_text">Авторизируйтесь</h2>
+            <form class="form" action="" method="post">
+                <div class="registration_element">
+                    <label for="login">Логин:</label>
+                    <input type="text" id="login" name="login" required>
+                </div>
+                <div class="registration_element">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="registration_element">
+                    <input class="auth_button" type="submit" value="Войти">
+                </div>
            </form> 
         </div>
         <div>
             <h2>Зарегиструйтесь</h2>
-            <form action="" method="post">
-            <label for="name">Фамилия и имя</label>
-            <input type="text" id="name" name="name" required>
-            <label for="date">Дата рождения</label>
-            <input type="date" id="date" name="date" required>
-            <label for="email">Адрес электронной почты</label>
-            <input type="email" id="email" name="email" required>
-             <label for="login">Логин:</label>
-             <input type="text" id="login" name="login" required>
-             <label for="password">Пароль:</label>
-             <input type="password" id="password" name="password" required>
-             <input type="submit" value="Зарегистрироваться">
+            <form class="form" action="" method="post">
+                <div class="registration_element">
+                    <label for="name">Фамилия и имя:</label>
+                    <input type="text" id="name" name="name" required>                
+                </div>
+                <div class="registration_element">
+                    <label for="date">Дата рождения:</label>
+                    <input class="date_picker" type="date" id="date" name="date" required>
+                </div>
+                <div class="registration_element">
+                    <label for="email">Адрес электронной почты:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="registration_element">
+                    <label for="login">Логин:</label>
+                    <input type="text" id="login" name="login" required>
+                </div>
+                <div class="registration_element">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="registration_element">
+                    <input class="auth_button" type="submit" value="Зарегистрироваться">
+                </div>
             </form> 
         </div>
     </main>

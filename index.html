@@ -15,6 +15,7 @@
             <img class="header__logo" src="images/scale_1200 (1).png" alt="Логотип" width="150" height="150">
             <h1 class="header__title">Онлайн-школа английского языка</h1>
         </a>
+        <hr class="divider">
         <nav class="header__menu">
             <ul class="menu">
                 <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
@@ -28,26 +29,47 @@
     <main class="main container">
         <div class="search">
             <form action="/">
-                <input type="text">
+                <input class="text_input" type="text">
                 <button class="search__button">Поиск курсов</button>
             </form>
         </div>
-        <section class="teacher">
-            <h2 class="teacher__list">Наши преподаватели</h2>
-            <div class="teacher__photo">
-                <div class="teacher__description">
-                    <img src="images/teacher-3.png" alt="Фото преподавателя" width="326" height="349">
-                    <p class="teacher__info">Информация о преподавателе</p>
-                    <p class="feedback__text">Отзывы</p>
+        <section class="teacher section_block">
+            <h2 class="teacher__list list">Наши преподаватели</h2>
+            <div class="photo_block">
+                <div class="teacher__description description">
+                    <img class="teacher_image image" src="images/teacher-3.png" alt="Фото преподавателя" width="326" height="349">
+                    <h3 class="course_naming">Иванова Ирина</h3>
+                    <p class="teacher__info info">Информация о преподавателе</p>
+                    <a href="#" class="feedback__text text">Отзывы</a>
+                </div>
+                <div class="teacher__description description">
+                    <img class="teacher_image image" src="images/teacher1.png" alt="Фото преподавателя" width="326" height="349">
+                    <h3 class="course_naming">Михайлова Мария</h3>
+                    <p class="teacher__info info">Информация о преподавателе</p>
+                    <a href="#" class="feedback__text text">Отзывы</a>
+                </div>
+                <button class="arrow_button">
+                    <img src="images/button.png" alt="Кнопка стрелка" width="100" height="100">
+                </button>
+            </div>
+        </section>
+        <section class="course section_block">
+            <h2 class="course__list list">Наши курсы</h2>
+            <div class="photo_block">
+                <div class="course__description description">
+                    <img class="course_image image" src="images/english.png" alt="Фото преподавателя" width="326" height="349">
+                    <h3 class="course_naming">Английский для всех</h3>
+                    <p class="course__info info">Информация о курсе</p>
                 </div>
 
-                <div class="teacher__description">
-                    <img src="images/teacher1.png" alt="Фото преподавателя" width="326" height="349">
-                    <p class="teacher__info">Информация о преподавателе</p>
-                    <p class="feedback__text">Отзывы</p>
+                <div class="course__description description">
+                    <img class="course_image image" src="images/child.png" alt="Фото преподавателя" width="326" height="349">
+                    <h3 class="course_naming">Английский для детей</h3>
+                    <p class="course__info info">Информация о курсе</p>
                 </div>
-                <button class="arrow_button"><img src="images/button.png" alt="Кнопка стрелка" width="100"
-                        height="100"></button>
+                <button class="arrow_button">
+                    <img src="images/button.png" alt="Кнопка стрелка" width="100" height="100">
+                </button>
             </div>
         </section>
     </main>
