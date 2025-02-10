@@ -27,6 +27,10 @@
     border-radius: 5px;
     font-weight: 600;
 }
+.menu__link:hover{
+    color: rgb(129, 197, 159);
+    transition: 0.5s;
+}
 .header__login {
     display: inline-block;
     padding: 10px;
@@ -37,6 +41,10 @@
     margin-left: auto;
     border-radius: 5px;
     font-weight: 600;
+}
+.header__login:hover{
+    color: rgb(129, 197, 159);
+    transition: 0.5s;
 }
 .header__logo-wrap {
     display: flex;

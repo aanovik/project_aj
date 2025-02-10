@@ -22,6 +22,10 @@
     border-radius: 5px;
     font-weight: 600;
 }
+.search__button:hover{
+    color: rgb(129, 197, 159);
+    transition: 0.5s
+}
 .section_block {
     margin: 0;
     padding: 0;
@@ -38,6 +42,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+@media (max-width: 768px){
+    .photo_block {justify-content: center;}
+    .arrow_button {
+        display: none;
+    }
 }
 .arrow_button {
     background-color:  rgb(238, 226, 220);
@@ -65,6 +77,11 @@
 .feedback__text {
     text-decoration: none;
     color: rgb(172, 59, 97);
+}
+.feedback__text:hover{
+    color: rgb(129, 197, 159);
+    transition: 0.5s;
+    font-size: 15pt;
 }
 .authorization_text {
     margin-top: 0px;
