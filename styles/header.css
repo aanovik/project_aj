@@ -28,7 +28,7 @@
     font-weight: 600;
 }
 .menu__link:hover{
-    color: rgb(129, 197, 159);
+    color: rgb(150, 83, 220);
     transition: 0.5s;
 }
 .header__login {
@@ -43,7 +43,7 @@
     font-weight: 600;
 }
 .header__login:hover{
-    color: rgb(129, 197, 159);
+    color: rgb(150, 83, 220);
     transition: 0.5s;
 }
 .header__logo-wrap {
