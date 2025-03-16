@@ -1,4 +1,4 @@
-'use strict'
+"use strict"
 
 /* 
 *   Алгоритм
@@ -20,28 +20,28 @@
 */
 
 // Получаем элементы слайдера для учителей
-const sliderTeacher = document.querySelector('.sliderTeacher');
-const prevButtonTeacher = document.querySelector('.prev_button_teacher');
-const nextButtonTeacher = document.querySelector('.next_button_teacher');
-const slidesTeacher = Array.from(sliderTeacher.querySelectorAll('div.teacher__description'));
+const sliderTeacher = document.querySelector(".sliderTeacher");
+const prevButtonTeacher = document.querySelector(".prev_button_teacher");
+const nextButtonTeacher = document.querySelector(".next_button_teacher");
+const slidesTeacher = Array.from(sliderTeacher.querySelectorAll("div.teacher__description"));
 const slideTeacherCount = slidesTeacher.length;
 let slideTeacherIndex = 0;
 
 // Получаем элементы слайдера для курсов
-const sliderCourse = document.querySelector('.sliderСourse');
-const prevButtonCourse = document.querySelector('.prev_button_course');
-const nextButtonCourse = document.querySelector('.next_button_course');
-const slidesCourse = Array.from(sliderCourse.querySelectorAll('div.course__description'));
+const sliderCourse = document.querySelector(".sliderСourse");
+const prevButtonCourse = document.querySelector(".prev_button_course");
+const nextButtonCourse = document.querySelector(".next_button_course");
+const slidesCourse = Array.from(sliderCourse.querySelectorAll("div.course__description"));
 const slideCourseCount = slidesCourse.length;
 let slideCourseIndex = 0;
 
 // Устанавливаем обработчики событий для кнопок учителей
-prevButtonTeacher.addEventListener('click', showPreviousTeacherSlide);
-nextButtonTeacher.addEventListener('click', showNextTeacherSlide);
+prevButtonTeacher.addEventListener("click", showPreviousTeacherSlide);
+nextButtonTeacher.addEventListener("click", showNextTeacherSlide);
 
 // Устанавливаем обработчики событий для кнопок курсов
-prevButtonCourse.addEventListener('click', showPreviousCourseSlide);
-nextButtonCourse.addEventListener('click', showNextCourseSlide);
+prevButtonCourse.addEventListener("click", showPreviousCourseSlide);
+nextButtonCourse.addEventListener("click", showNextCourseSlide);
 
 // Функция для показа предыдущего слайда учителей
 function showPreviousTeacherSlide() {
@@ -71,9 +71,9 @@ function showNextCourseSlide() {
 function updateTeacherSlider() {
   slidesTeacher.forEach((slide, index) => {
     if (index === slideTeacherIndex) {
-      slide.style.display = 'flex';
+      slide.style.display = "flex";
     } else {
-      slide.style.display = 'none';
+      slide.style.display = "none";
     }
   });
 }
@@ -82,9 +82,9 @@ function updateTeacherSlider() {
 function updateCourseSlider() {
   slidesCourse.forEach((slide, index) => {
     if (index === slideCourseIndex) {
-      slide.style.display = 'flex';
+      slide.style.display = "flex";
     } else {
-      slide.style.display = 'none';
+      slide.style.display = "none";
     }
   });
 }
@@ -95,5 +95,57 @@ updateCourseSlider();
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log('Скрипт отработал корректно');  
+    console.log("Скрипт отработал корректно");
+
+    const menuList = document.querySelector(".menu");
+
+    // Данные для подставновки
+    const menuData = {
+      menu1: {
+        classParent: "menu__item",
+        classChild: "menu__link",
+        href: "index.html",
+        title: "Главная",
+      },
+      menu2: {
+        classParent: "menu__item",
+        classChild: "menu__link",
+        href: "#",
+        title: "Курсы",
+      },
+      menu3: {
+        classParent: "menu__item",
+        classChild: "menu__link",
+        href: "#",
+        title: "Преподаватели",
+      },
+      menu4: {
+        classParent: "menu__item",
+        classChild: "menu__link",
+        href: "#",
+        title: "Контакты",
+      },
+    }
+    
+    // Создание карточки
+    const createCard = (classParent, classChild, href, title) => {
+      const card = document.createElement("li");
+      card.className = classParent;
+
+      const childContainer = document.createElement("a");
+      childContainer.className = classChild;
+      childContainer.href = href;
+      childContainer.textContent = title;
+
+      card.appendChild(childContainer);
+
+      return card;
+    }
+
+    // Вставка карточек
+    for (const menuKey in menuData) {
+      const card = menuData[menuKey];
+      const menuElement = createCard(card.classParent, card.classChild, card.href, card.title);
+      menuList.appendChild(menuElement);
+    }
 });
