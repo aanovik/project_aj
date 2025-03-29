@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Онлайн-школа английского языка</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -25,7 +26,7 @@
                 <a class="header__login" href="login.html">Вход</a>
             </nav>
         </header>
-        <main class="main container">
+        <main class="main container main_page">
             <div class="search">
                 <form action="/">
                     <input class="text_input" type="text">
@@ -77,6 +78,39 @@
                     </button>
                 </div>
             </section>
+
+            <section class='section_block'>
+                <h2 class="news__list list">Наши новости</h2>
+            </section>
+
+            <section class="section card card--slider swiper">
+                <div class="card__list card__list--slider swiper-wrapper">
+                    <div class="card__item swiper-slide description centered-blocks">
+                        <h3 class="card__title">Мы с учениками</h3>
+                        <img class="image" src="images/child.jpg" alt="Фото котика" width="326" height="349">
+                        <p class="card__description">Что происходило на последних занятиях с учениками?</p>
+                    </div>
+                    <div class="card__item swiper-slide description centered-blocks">
+                        <h3 class="card__title">Мы в МарГУ</h3>
+                        <img class="image" src="images/marsu.jpg" alt="Фото котика" width="326" height="349">
+                        <p class="card__description">Деликатесы в нашем любимом МарГУ</p>
+                    </div>
+                    <div class="card__item swiper-slide description centered-blocks">
+                        <h3 class="card__title">Мы с домашними животными</h3>
+                        <img class="image" src="images/home.jpg" alt="Фото котика" width="326" height="349">
+                        <p class="card__description">Наши домашние питомцы</p>
+                    </div>
+                    <div class="card__item swiper-slide description centered-blocks">
+                        <h3 class="card__title">Мы в посвседневности</h3>
+                        <img class="image" src="images/all_time.jpg" alt="Фото котика" width="326" height="349">
+                        <p class="card__description">Как мы отдыхаем от учебы</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </section>
+
             <section class="course section_block">
                 <h2 class="course__list list">Наши курсы</h2>
                 <div class="photo_block course_photo_block">
@@ -109,6 +143,7 @@
             Новик Алина, Павлова Юлия, ЛВ-41
            <!-- <p class="footer__text">Новик Алина, Павлова Юлия, ЛВ-41</p>-->
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="scripts/script.js"></script>
     </body>
     </div>
