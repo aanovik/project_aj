@@ -100,32 +100,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuList = document.querySelector(".menu");
 
     // Данные для подставновки
-    const menuData = {
-      menu1: {
-        classParent: "menu__item",
-        classChild: "menu__link",
-        href: "index.html",
-        title: "Главная",
-      },
-      menu2: {
-        classParent: "menu__item",
-        classChild: "menu__link",
-        href: "#",
-        title: "Курсы",
-      },
-      menu3: {
-        classParent: "menu__item",
-        classChild: "menu__link",
-        href: "#",
-        title: "Преподаватели",
-      },
-      menu4: {
-        classParent: "menu__item",
-        classChild: "menu__link",
-        href: "#",
-        title: "Контакты",
-      },
-    }
+    const menuData = './data.json';
+
+    fetch(menuData)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); // Данные
+        console.log(typeof (data)); // Тип полученных данных
+
+        data.forEach(card => {
+          const menuElement = createCard(card.classParent, card.classChild, card.href, card.title);
+          menuList.appendChild(menuElement);
+        });
+      })
     
     // Создание карточки
     const createCard = (classParent, classChild, href, title) => {
@@ -142,10 +129,20 @@ document.addEventListener("DOMContentLoaded", () => {
       return card;
     }
 
-    // Вставка карточек
-    for (const menuKey in menuData) {
-      const card = menuData[menuKey];
-      const menuElement = createCard(card.classParent, card.classChild, card.href, card.title);
-      menuList.appendChild(menuElement);
+    // Preloader страницы
+    const preloader = document.querySelector('.preloader');
+    const content = document.querySelector('.content');
+    if (preloader && content) {
+      setTimeout(() => {
+        // Скрываем прелоадер
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+
+        // Показываем контент
+        content.style.display = 'block';
+
+        // Удаляем элемент из DOM
+        preloader.remove();
+      }, 3000); // Задержка 3 секунды
     }
 });

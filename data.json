@@ -1,0 +1,26 @@
+[
+    {
+        "classParent": "menu__item",
+        "classChild": "menu__link",
+        "href": "index.html",
+        "title": "Главная"
+    },
+    {
+        "classParent": "menu__item",
+        "classChild": "menu__link",
+        "href": "#",
+        "title": "Курсы"
+    },
+    {
+        "classParent": "menu__item",
+        "classChild": "menu__link",
+        "href": "#",
+        "title": "Преподаватели"
+    },
+    {
+        "classParent": "menu__item",
+        "classChild": "menu__link",
+        "href": "#",
+        "title": "Контакты"
+      }
+]
